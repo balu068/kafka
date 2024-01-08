@@ -9,10 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.Instant;
-import java.time.ZoneId;
 import java.time.ZoneOffset;
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Properties;
 
 
@@ -42,8 +39,7 @@ public class ProducerDemoWithCallback {
                 }
                 else {
                     log.error("Error while producing " + e);
-                };
-
+                }
             }
         });
 

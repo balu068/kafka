@@ -39,7 +39,7 @@ public class ProducerDemoKeys {
                 }
                 else {
                     log.error("Error while producing " + e);
-                };
+                }
 
             }
         });
