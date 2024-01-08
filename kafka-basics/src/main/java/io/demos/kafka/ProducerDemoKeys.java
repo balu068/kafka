@@ -1,4 +1,4 @@
-package io.conduktor.demos.kafka;
+package io.demos.kafka;
 
 import org.apache.kafka.clients.producer.Callback;
 import org.apache.kafka.clients.producer.KafkaProducer;
@@ -13,8 +13,8 @@ import java.time.ZoneOffset;
 import java.util.Properties;
 
 
-public class ProducerDemoWithCallback {
-    private static final Logger log = LoggerFactory.getLogger(ProducerDemoWithCallback.class.getSimpleName());
+public class ProducerDemoKeys {
+    private static final Logger log = LoggerFactory.getLogger(ProducerDemoKeys.class.getSimpleName());
     public static void main(String[] args) {
 //Set producer properties
         Properties properties = new Properties();
@@ -24,7 +24,7 @@ public class ProducerDemoWithCallback {
 //Init producer
         KafkaProducer<String, String> producer = new KafkaProducer<>(properties);
 //Init producer record
-        ProducerRecord<String, String> producerRecord = new ProducerRecord<>("demo_java", "hello_world");
+        ProducerRecord<String, String> producerRecord = new ProducerRecord<>("demo_java","123", "hello_world");
 //Send message
         producer.send(producerRecord, new Callback() {
             @Override
@@ -40,6 +40,7 @@ public class ProducerDemoWithCallback {
                 else {
                     log.error("Error while producing " + e);
                 }
+
             }
         });
 
