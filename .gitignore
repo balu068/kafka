@@ -1,4 +1,12 @@
-.idea
-.gradle
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+#Gradle
+.gradle/
+build/
+
 kafka-basics/build/
 kafka-basics/out/
