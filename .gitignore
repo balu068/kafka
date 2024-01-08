@@ -1,4 +1,4 @@
 .idea
 .gradle
-./kafka-basics/build/
-./kafka-basics/out/
+kafka-basics/build/
+kafka-basics/out/
