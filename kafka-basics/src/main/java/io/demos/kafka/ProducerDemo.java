@@ -23,7 +23,6 @@ public class ProducerDemo {
         ProducerRecord<String, String> producerRecord = new ProducerRecord<>("demo_java", "hello_world");
 
         producer.send(producerRecord);
-
         producer.flush();
         producer.close();
     }
